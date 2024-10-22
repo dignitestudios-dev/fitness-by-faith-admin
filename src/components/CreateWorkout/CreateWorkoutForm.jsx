@@ -22,7 +22,7 @@ const CreateWorkoutForm = () => {
         setImage(base64String);
         // updateProfile(base64String);
 
-        // console.log(base64String)
+        // console.log(base64String)abc
       } catch (error) {
         console.error("Error converting image to base64:", error.message);
       }
