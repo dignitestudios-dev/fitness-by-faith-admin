@@ -19,7 +19,6 @@ instance.interceptors.request.use((request) => {
 instance.interceptors.response.use((response) => {
   if(response?.data?.status === 401){
     localStorage.clear()
-    window.location.href="/login"
   }
   else{
     if (response) {

@@ -1,16 +1,24 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Sidebar from "./Sidebar";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { AuthContext } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Layout = ({ pages }) => {
   const {name,email} = useContext(AuthContext);
   const sidebarRef = useRef(null);
   const [isOpen, setisOpen] = useState(false);
-  
+  const navigate = useNavigate()
   const toggleModal = () => {
     setisOpen(!isOpen);
   };
+
+  useEffect(()=>{
+    const token = localStorage.getItem("token")
+    if(!token){
+      navigate("/login")
+    }
+  },[])
 
   return (
     <div className="w-screen h-screen flex justify-start items-start">

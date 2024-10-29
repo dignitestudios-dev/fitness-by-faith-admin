@@ -14,7 +14,6 @@ const Login = () => {
   const { login } = useContext(AuthContext);
   const [showPass, setShowPass] = useState(false);
   const [formData, setFormData] = useState({ email: "", password: "" });
-  
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -45,6 +44,13 @@ const Login = () => {
       setLoading(false)
     }
   };
+
+  useEffect(()=>{
+    const token = localStorage.getItem("token")
+    if(token){
+      navigate("/dashboard")
+    }
+  },[])
 
   return (
     <div className="font-[sans-serif] text-[#333]">
