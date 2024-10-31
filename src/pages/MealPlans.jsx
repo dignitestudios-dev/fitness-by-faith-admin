@@ -66,7 +66,7 @@ const MealPlans = () => {
           </button>
           <button className={`text-[12px] ${selectedFilter === 'HighProtein' ? 'bg-[#64B5AC] text-white' : 'bg-gray-200 text-black'} px-4 py-1 rounded-full hover:bg-[#64B5AC] hover:text-white font-medium transition-all duration-300`}
             onClick={() => handleFilterClick('HighProtein')}>
-              Hight Protein
+              High Protein
           </button>
           <button className={`text-[12px] ${selectedFilter === 'LowCarbs' ? 'bg-[#64B5AC] text-white' : 'bg-gray-200 text-black'} px-4 py-1 rounded-full hover:bg-[#64B5AC] hover:text-white font-medium transition-all duration-300`}
             onClick={() => handleFilterClick('LowCarbs')}>

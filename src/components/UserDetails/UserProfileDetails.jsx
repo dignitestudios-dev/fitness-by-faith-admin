@@ -39,13 +39,13 @@ const UserProfileDetails = ({data}) => {
         <div className="col-span-2 md:col-span-1">
             <p className="text-sm font-medium">Gender: </p>
             <div className="w-full py-3 rounded-lg bg-gray-50 text-center text-sm text-gray-400">
-                {data?.gender}
+                {data?.gender || "--"}
             </div>
         </div>
         <div className="col-span-2 md:col-span-1">
             <p className="text-sm font-medium">Age: </p>
             <div className="w-full py-3 rounded-lg bg-gray-50 text-center text-sm text-gray-400">
-            {data?.age}
+            {data?.age|| "--"}
             </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ const UserProfileDetails = ({data}) => {
         <div className="col-span-2 md:col-span-1">
             <p className="text-sm font-medium">Weight: </p>
             <div className="w-full py-3 rounded-lg bg-gray-50 text-center text-sm text-gray-400">
-              {data?.weight} Kg
+              {data?.weight} lbs
             </div>
         </div>
         <div className="col-span-2 md:col-span-1">
